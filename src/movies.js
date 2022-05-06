@@ -1,6 +1,8 @@
 // The `movies` array from the file `src/data.js`.
 //console.log('movies: ');
 
+const movies = require("./data");
+
 //const movies = require("./data");
 
 
@@ -47,7 +49,13 @@ function scoresAverage(movies) {
 
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
-function dramaMoviesScore() {}
+function dramaMoviesScore() {
+ const dramaFilm = movies.filter((movie) => {
+   return movie.genre.includes("Drama")
+ });
+ averageScore = scoresAverage(dramaFilm)
+ return averageScore;
+}
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
 function orderByYear() {}
